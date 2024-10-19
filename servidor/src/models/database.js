@@ -1,13 +1,23 @@
+require("dotenv").config();
 const { Sequelize } = require("sequelize");
+console.log("Database Config:", {
+  database: process.env.DB_DATABASE,
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  dialect: process.env.DB_DIALECT,
+  useSSL: process.env.DB_USE_SSL,
+});
 
 // Configuration for PostgreSQL connection
 const config = {
-  database: "defaultdb", // Change this to your actual database name
-  username: "avnadmin",
-  password: "AVNS_HiPJu3hFbUcmfljhHn7",
-  host: "hackatl-hackatl.k.aivencloud.com",
-  port: 16969,
-  dialect: "postgres",
+  database: process.env.DB_DATABASE,
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  dialect: process.env.DB_DIALECT,
   dialectOptions: {
     ssl: {
       rejectUnauthorized: true,
