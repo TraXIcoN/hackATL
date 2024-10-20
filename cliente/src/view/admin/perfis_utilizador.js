@@ -13,24 +13,24 @@ import avatar from "../../images/avatars/01.png";
 import banner from "../../images/dashboard/top-header.png";
 import iconbanner from "../../images/UrbanPulse/customer-behavior 1.png";
 
-export default function PerfilUtilizadores() {
-  const [dataUtilizadores, setdataUtilizadores] = useState([]);
-  const [dataLigacao, setdataLigacao] = useState([]);
+export default function UserProfiles() {
+  const [dataUsers, setDataUsers] = useState([]);
+  const [dataConnection, setDataConnection] = useState([]);
   const currentUser = AuthService.getCurrentUserId();
 
   useEffect(() => {
-    LoadUtilizadores();
-    LoadLigacao();
+    loadUsers();
+    loadConnection();
   }, []);
 
-  function LoadUtilizadores() {
+  function loadUsers() {
     const url = "http://localhost:3000/utilizadores/";
     axios
       .get(url)
       .then((res) => {
         if (res.data.success) {
           const data = res.data.data;
-          setdataUtilizadores(data);
+          setDataUsers(data);
         } else {
           alert("Error Web Service!");
         }
@@ -40,14 +40,14 @@ export default function PerfilUtilizadores() {
       });
   }
 
-  function LoadLigacao() {
+  function loadConnection() {
     const url = "http://localhost:3000/ligacao/";
     axios
       .get(url)
       .then((res) => {
         if (res.data.success) {
           const data = res.data.data;
-          setdataLigacao(data);
+          setDataConnection(data);
         } else {
           alert("Error Web Service!");
         }
@@ -57,25 +57,25 @@ export default function PerfilUtilizadores() {
       });
   }
 
-  //função que mostra todos os utilizadores do site
-  var tipoUtilizador = "";
-  function UtilizadoresAdmin() {
+  // Function that shows all users on the site
+  var userType = "";
+  function AdminUsers() {
     const [showModal, setShowModal] = useState(false);
-    const [selectedUserId, setSelectedUserId] = useState(null); // Estado para armazenar o ID do utilizador selecionado
+    const [selectedUserId, setSelectedUserId] = useState(null);
     const handleModalClose = () => {
       setShowModal(false);
     };
-    return dataUtilizadores.map((data) => {
-      return dataLigacao.map((dataL) => {
-        //confirma qual é o role do vendedor
+    return dataUsers.map((data) => {
+      return dataConnection.map((dataL) => {
+        // Confirms the role of the seller
         if (data.iduser === dataL.utilizadoreIduser) {
-          let tipoUtilizador;
+          let userType;
           if (dataL.tipoutilizadoreCode === "V") {
-            tipoUtilizador = "Seller";
+            userType = "Seller";
           } else if (dataL.tipoutilizadoreCode === "C") {
-            tipoUtilizador = "Buyer";
+            userType = "Buyer";
           } else {
-            tipoUtilizador = "Admin";
+            userType = "Admin";
           }
           const handleClick = () => {
             setSelectedUserId(data.iduser);
@@ -88,10 +88,10 @@ export default function PerfilUtilizadores() {
                 onHide={handleModalClose}
               >
                 <Modal.Header closeButton>
-                  <Modal.Title>Utilizador nº:{data.iduser}</Modal.Title>
+                  <Modal.Title>User ID: {data.iduser}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                  <div className="card   rounded">
+                  <div className="card rounded">
                     <div className="card-body">
                       <div className="row">
                         <div className="col-sm-12 mt-4">
@@ -100,7 +100,7 @@ export default function PerfilUtilizadores() {
                               <tbody>
                                 <tr>
                                   <td>
-                                    <h6 className="mb-0">Nome</h6>
+                                    <h6 className="mb-0">Name</h6>
                                   </td>
                                   <td className="text-center">
                                     {data.nomeuser}
@@ -114,7 +114,7 @@ export default function PerfilUtilizadores() {
                                 </tr>
                                 <tr>
                                   <td>
-                                    <h6 className="mb-0">Telemovel</h6>
+                                    <h6 className="mb-0">Phone</h6>
                                   </td>
                                   <td className="text-center">
                                     {data.telemovel}
@@ -152,7 +152,7 @@ export default function PerfilUtilizadores() {
                     <h6>{data.nomeuser}</h6>
                   </div>
                 </td>
-                <td>{tipoUtilizador}</td>
+                <td>{userType}</td>
                 <td>{data.nCompras + data.servicosVendidos}</td>
                 <td>
                   <button
@@ -160,8 +160,7 @@ export default function PerfilUtilizadores() {
                     className="btn btn-primary"
                     onClick={handleClick}
                   >
-                    {" "}
-                    <i class="fa-solid fa-eye"></i>{" "}
+                    <i className="fa-solid fa-eye"></i>
                   </button>
                 </td>
               </tr>
@@ -177,13 +176,13 @@ export default function PerfilUtilizadores() {
       <aside className="sidebar sidebar-default sidebar-white sidebar-base navs-rounded-all ">
         <div className="sidebar-header d-flex align-items-center justify-content-start">
           <Link to={`/`} className="navbar-brand">
-            {/*Logo start*/}
-            {/*logo End*/}
-            {/*Logo start*/}
+            {/* Logo start */}
+            {/* Logo End */}
+            {/* Logo start */}
             <div className="logo-main">
               <div className="logo-normal">
                 <svg
-                  className=" icon-30"
+                  className="icon-30"
                   viewBox="0 0 30 30"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -228,7 +227,7 @@ export default function PerfilUtilizadores() {
               </div>
               <div className="logo-mini">
                 <svg
-                  className=" icon-30"
+                  className="icon-30"
                   viewBox="0 0 30 30"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -272,7 +271,7 @@ export default function PerfilUtilizadores() {
                 </svg>
               </div>
             </div>
-            {/*logo End*/}
+            {/* Logo End */}
             <h4 className="logo-title">UrbanPulse</h4>
           </Link>
         </div>
@@ -312,7 +311,7 @@ export default function PerfilUtilizadores() {
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link  active"
+                  className="nav-link active"
                   aria-current="page"
                   to={`/perfis_utilizadores/`}
                 >
@@ -332,7 +331,7 @@ export default function PerfilUtilizadores() {
                       />
                     </svg>
                   </i>
-                  <span className="item-name">Perfis de Utilizadores</span>
+                  <span className="item-name">User Profiles</span>
                 </Link>
               </li>
               <li className="nav-item">
@@ -357,7 +356,7 @@ export default function PerfilUtilizadores() {
                       />
                     </svg>
                   </i>
-                  <span className="item-name">Definições</span>
+                  <span className="item-name">Settings</span>
                 </Link>
               </li>
             </ul>
@@ -516,7 +515,7 @@ export default function PerfilUtilizadores() {
                   <div className="flex-wrap d-flex justify-content-between align-items-center">
                     <div>
                       <h1>Admin</h1>
-                      <p>Aqui pode visualizar todos os usuários deste site</p>
+                      <p>Here you can view all users on this site</p>
                     </div>
                     <div>
                       <img
@@ -542,12 +541,13 @@ export default function PerfilUtilizadores() {
         </div>
         <div className="container-fluid content-inner mt-n5 py-0">
           <div className="row mt-5">
-            {/*Perfis de Utilizadores*/}
+            {/* User Profiles */}
             <div className="col-md-12 col-lg-12">
               <div className="overflow-hidden card">
                 <div className="flex-wrap card-header d-flex justify-content-between">
                   <div className="header-title">
-                    <h4 className="mb-2 card-title">Utilizadores</h4>
+                    <h4 className="mb-2 card-title">Users</h4>{" "}
+                    {/* Changed to English */}
                   </div>
                 </div>
                 <div className="p-0 card-body">
@@ -555,13 +555,72 @@ export default function PerfilUtilizadores() {
                     <table id="basic-table" className="table mb-0" role="grid">
                       <thead>
                         <tr>
-                          <th>Nome</th>
-                          <th>Role</th>
-                          <th>Trocas</th>
-                          <th>Perfil</th>
+                          <th>Seller</th>
+                          <th>Buyer</th>
+                          <th>Duration</th>
+                          <th>Contract</th>
                         </tr>
                       </thead>
-                      <tbody>{UtilizadoresAdmin()}</tbody>
+                      <tbody>
+                        {/* Dummy data added here */}
+                        <tr>
+                          <td>
+                            <div className="d-flex align-items-center">
+                              <img
+                                className="rounded bg-soft-primary img-fluid avatar-40 me-3"
+                                src={avatar} // Assuming avatar is defined elsewhere
+                                alt="profile"
+                              />
+                              <h6>Seller Name 1</h6>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="d-flex align-items-center">
+                              <img
+                                className="rounded bg-soft-primary img-fluid avatar-40 me-3"
+                                src={avatar} // Assuming avatar is defined elsewhere
+                                alt="profile"
+                              />
+                              <h6>Buyer Name 1</h6>
+                            </div>
+                          </td>
+                          <td>12 months</td> {/* Dummy duration */}
+                          <td>
+                            <button type="button" className="btn btn-primary">
+                              <i className="fa-solid fa-eye"></i> View
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div className="d-flex align-items-center">
+                              <img
+                                className="rounded bg-soft-primary img-fluid avatar-40 me-3"
+                                src={avatar} // Assuming avatar is defined elsewhere
+                                alt="profile"
+                              />
+                              <h6>Seller Name 2</h6>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="d-flex align-items-center">
+                              <img
+                                className="rounded bg-soft-primary img-fluid avatar-40 me-3"
+                                src={avatar} // Assuming avatar is defined elsewhere
+                                alt="profile"
+                              />
+                              <h6>Buyer Name 2</h6>
+                            </div>
+                          </td>
+                          <td>6 months</td> {/* Dummy duration */}
+                          <td>
+                            <button type="button" className="btn btn-primary">
+                              <i className="fa-solid fa-eye"></i> View
+                            </button>
+                          </td>
+                        </tr>
+                        {/* Add more dummy rows as needed */}
+                      </tbody>
                     </table>
                   </div>
                 </div>
@@ -576,8 +635,8 @@ export default function PerfilUtilizadores() {
               <div className="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4">
                 <div className="col-md-6 d-flex align-items-center text-muted fs-4 ">
                   <p className="ms-5 ps-5">
-                    Conectamos compradores e vendedores para uma economia
-                    energética e sustentável!
+                    We connect buyers and sellers for an energy economy and
+                    sustainable!
                   </p>
                 </div>
                 <div className="col-md-2 justify-content-end ">

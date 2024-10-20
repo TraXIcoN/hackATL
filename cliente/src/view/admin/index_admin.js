@@ -11,10 +11,30 @@ import jsPDF from "jspdf";
 import Aleatorio from "../valorAleatorioDiario";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-
+import GraphComponent from "../localNetwork/GraphComponent";
 import avatar from "../../images/avatars/01.png";
 import banner from "../../images/dashboard/top-header.png";
 import iconbanner from "../../images/UrbanPulse/customer-behavior 1.png";
+import { Bar } from "react-chartjs-2"; // Import Bar chart from Chart.js
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js"; // Import necessary components from Chart.js
+// Register the components
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
 const baseUrl = "http://localhost:3000";
 
 export default function DashboardAdmin() {
@@ -487,6 +507,32 @@ export default function DashboardAdmin() {
     window.location.reload();
   }
 
+  // Function to render the graphs
+  function RenderGraphs() {
+    const data = {
+      labels: ["January", "February", "March", "April", "May", "June", "July"], // Example labels
+      datasets: [
+        {
+          label: "Total Ganho",
+          data: [65, 59, 80, 81, 56, 55, 40], // Example data
+          backgroundColor: "rgba(75, 192, 192, 0.6)",
+        },
+        {
+          label: "Total Comprado",
+          data: [28, 48, 40, 19, 86, 27, 90], // Example data
+          backgroundColor: "rgba(153, 102, 255, 0.6)",
+        },
+      ],
+    };
+
+    return (
+      <div>
+        <h2>Gráficos de Estatísticas</h2>
+        <Bar data={data} />
+      </div>
+    );
+  }
+
   //return final da view
   return (
     <div>
@@ -863,28 +909,18 @@ export default function DashboardAdmin() {
             {ValidaContratos()}
             {/*Estatísticas Admin*/}
             {EstatisticasAdmin()}
-            {/*Compras do Site*/}
+            {/* Render the GraphComponent here */}
             <div className="col-md-12 col-lg-12">
               <div className="overflow-hidden card">
                 <div className="flex-wrap card-header d-flex justify-content-between">
                   <div className="header-title">
-                    <h4 className="mb-2 card-title">Compras no Site</h4>
+                    <h4 className="mb-2 card-title">
+                      Marvel Character Network
+                    </h4>
                   </div>
                 </div>
-                <div className="p-0 card-body">
-                  <div className="mt-4 table-responsive">
-                    <table id="basic-table" className="table mb-0" role="grid">
-                      <thead>
-                        <tr>
-                          <th>Vendedor</th>
-                          <th>Comprador</th>
-                          <th>Duração</th>
-                          <th>Contrato</th>
-                        </tr>
-                      </thead>
-                      <tbody>{ComprasSite()}</tbody>
-                    </table>
-                  </div>
+                <div className="card-body">
+                  <GraphComponent /> {/* Render the graph here */}
                 </div>
               </div>
             </div>

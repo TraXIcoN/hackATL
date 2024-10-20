@@ -256,7 +256,7 @@ export default function SignIn() {
                         </div>
                         <p className="mt-3 text-center">
                           Don't have an account?{" "}
-                          <Link to={`/register/`} className="text-underline">
+                          <Link to={`/registar/`} className="text-underline">
                             Create one!
                           </Link>
                         </p>
