@@ -308,7 +308,7 @@ export default function Compras() {
               </div>
             </div>
             {/*logo End*/}
-            <h4 className="logo-title">wonderIT</h4>
+            <h4 className="logo-title">UrbanPulse</h4>
           </Link>
         </div>
         <div className="sidebar-body pt-0 data-scrollbar">
@@ -503,7 +503,7 @@ export default function Compras() {
                   </div>
                 </div>
                 {/*logo End*/}
-                <h4 className="logo-title">wonderIT</h4>
+                <h4 className="logo-title">UrbanPulse</h4>
               </a>
               <div
                 className="sidebar-toggle"

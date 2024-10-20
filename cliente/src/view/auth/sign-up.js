@@ -162,7 +162,7 @@ export default function Register() {
                           </div>
                         </div>
                         {/*logo End*/}
-                        <h4 className="logo-title ms-3">wonderIT</h4>
+                        <h4 className="logo-title ms-3">UrbanPulse</h4>
                       </a>
                       <h2 className="mb-2 text-center">Registration</h2>
                       <p className="text-center">Create your account</p>

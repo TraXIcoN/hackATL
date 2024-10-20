@@ -150,7 +150,7 @@ export default function RegisterBuyer() {
                           </div>
                         </div>
                         {/*logo End*/}
-                        <h4 className="logo-title ms-3">wonderIT</h4>
+                        <h4 className="logo-title ms-3">UrbanPulse</h4>
                       </a>
                       <h2 className="mb-2 text-center">Buyer Registration</h2>
                       <p className="text-center">Register your details</p>
@@ -213,7 +213,7 @@ export default function RegisterBuyer() {
                             type="submit"
                             className="btn btn-primary"
                             onClick={() => sendUpdate()}
-                            to={`/dashboard_buyer/${currentUser}`}
+                            to={`/dashboard_comprador/${currentUser}`}
                           >
                             Register
                           </Link>

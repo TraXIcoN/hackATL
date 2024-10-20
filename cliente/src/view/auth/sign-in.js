@@ -51,9 +51,9 @@ export default function SignIn() {
       const user = dataUsers.find((data) => data.email === username);
       if (user) {
         if (user.ligacaoUsers[0].tipoutilizadoreCode === "V") {
-          window.location.href = `/dashboard_seller/${user.iduser}`;
+          window.location.href = `/dashboard_vendedor/${user.iduser}`;
         } else if (user.ligacaoUsers[0].tipoutilizadoreCode === "C") {
-          window.location.href = `/dashboard_buyer/${user.iduser}`;
+          window.location.href = `/dashboard_comprador/${user.iduser}`;
         } else {
           window.location.href = "/dashboard_admin/";
         }
@@ -77,9 +77,9 @@ export default function SignIn() {
         if (user) {
           await findUserId(username); // Wait for the promise to resolve
           if (user.ligacaoUsers[0].tipoutilizadoreCode === "V") {
-            window.location.href = `/dashboard_seller/${user.iduser}`;
+            window.location.href = `/dashboard_vendedor/${user.iduser}`;
           } else if (user.ligacaoUsers[0].tipoutilizadoreCode === "C") {
-            window.location.href = `/dashboard_buyer/${user.iduser}`;
+            window.location.href = `/dashboard_comprador/${user.iduser}`;
           } else {
             window.location.href = "/dashboard_admin/";
           }
@@ -201,7 +201,7 @@ export default function SignIn() {
                           </div>
                         </div>
                         {/*logo End*/}
-                        <h4 className="logo-title ms-3">wonderIT</h4>
+                        <h4 className="logo-title ms-3">UrbanPulse</h4>
                       </a>
                       <h2 className="mb-2 text-center">Sign In</h2>
                       <p className="text-center">
