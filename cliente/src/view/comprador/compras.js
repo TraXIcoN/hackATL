@@ -13,7 +13,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import avatar from "../../images/avatars/01.png";
 import banner from "../../images/dashboard/top-header.png";
-import iconbanner from "../../images/wonderit/customer-behavior 1.png";
+import iconbanner from "../../images/UrbanPulse/customer-behavior 1.png";
 
 const baseUrl = "http://localhost:3000";
 const databaseUrl = "hackatl-hackatl.k.aivencloud.com";
@@ -648,7 +648,7 @@ export default function Compras() {
                       </svg>
                     </a>
                     <span className="mb-3 mb-md-0 text-muted">
-                      © 2023 wonderit
+                      © 2024 UrbanPulse
                     </span>
                   </div>
                   <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">

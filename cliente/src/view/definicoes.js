@@ -12,7 +12,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import avatar from "../images/avatars/01.png";
 import banner from "../images/dashboard/top-header.png";
-import iconbanner from "../images/wonderit/customer-behavior 1.png";
+import iconbanner from "../images/UrbanPulse/customer-behavior 1.png";
 
 const baseUrl = "http://localhost:3000";
 

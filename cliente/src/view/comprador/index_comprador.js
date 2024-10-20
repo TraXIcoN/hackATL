@@ -17,7 +17,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import avatar from "../../images/avatars/01.png";
 import banner from "../../images/dashboard/top-header.png";
-import iconbanner from "../../images/wonderit/customer-behavior 1.png";
+import iconbanner from "../../images/UrbanPulse/customer-behavior 1.png";
 
 const currentUser = AuthService.getCurrentUserId();
 
@@ -978,7 +978,7 @@ export default function DashboardComprador() {
                       </svg>
                     </a>
                     <span className="mb-3 mb-md-0 text-muted">
-                      © 2023 wonderit
+                      © 2024 UrbanPulse
                     </span>
                   </div>
                   <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
