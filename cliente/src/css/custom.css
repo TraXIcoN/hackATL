@@ -13,7 +13,7 @@
 hr {
   margin: 1rem 0;
   color: inherit;
-  background-color: currentColor;
+  background-color: orange;
   border: 0;
   opacity: 0.25;
 }
@@ -56,7 +56,7 @@ hr {
   padding: 1.5rem;
   -webkit-border-radius: 0.5rem;
           border-radius: 0.5rem;
-  border: 1px dashed #ced4da;
+  border: 1px dashed orange;
 }
 .card .card-body .grid-flow-col {
   grid-auto-flow: column;
@@ -66,7 +66,7 @@ hr {
   width: 36px;
   min-width: 36px;
   line-height: 36px;
-  background: #F5F6FA;
+  background: orange;
   text-align: center;
   font-size: 1rem;
   text-decoration: none;
@@ -82,13 +82,13 @@ hr {
   z-index: 9;
 }
 .card .card-body .iq-media-group-1 .iq-media-1 img {
-  border: 2px solid #eee;
+  border: 2px solid orange;
 }
 .card .card-body .iq-media-group-1 .iq-media-1:first-child {
   margin-left: 0;
 }
 .card .card-body .iq-media-group-1 .iq-media.border {
-  border: 2px solid #eee;
+  border: 2px solid orange;
 }
 .card .card-body .iq-media-1 {
   display: -webkit-inline-box;
@@ -111,17 +111,17 @@ hr {
 }
 .pricing .table th {
   border-top: none;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid orange;
 }
 .pricing .table td {
   border-top: none !important;
 }
 .pricing .table tr {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid orange;
 }
 
 .prc-box {
-  background: #d8ddfa;
+  background: orange;
   padding: 15px;
   position: relative;
   -webkit-border-radius: 0.5rem;
@@ -131,7 +131,7 @@ hr {
 
 .type {
   position: absolute;
-  background: #3a57e8;
+  background: orangered;
   padding: 9px 25px;
   color: #ffffff;
   top: -15px;
@@ -163,13 +163,13 @@ hr {
 }
 
 .prc-box.active {
-  background: #3a57e8;
+  background: orange;
 }
 .prc-box.active .h3 {
-  color: #ffffff;
+  color: orange;
 }
 .prc-box.active .type {
-  background: #d8ddfa;
+  background: orange;
   color: #212529;
 }
 .prc-box.active .type:before {
@@ -186,8 +186,8 @@ hr {
 }
 
 .child-cell.active {
-  color: #3a57e8;
-  stroke: #3a57e8;
+  color: orangered;
+  stroke: orangered;
 }
 
 .line-around {
@@ -197,7 +197,7 @@ hr {
 }
 .line-around .line-around-1 {
   text-transform: uppercase;
-  background: #ffffff;
+  background: orange;
   padding: 0 10px 0 0;
 }
 
@@ -263,7 +263,7 @@ hr {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #ffffff;
+  color: orange;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -271,7 +271,7 @@ hr {
 .main-img .container h1 {
   margin: 0;
   font-size: 4.375rem;
-  color: #ffffff;
+  color: orange;
 }
 .main-img .container h1 span {
   padding: 0.375rem 0.875rem;
@@ -314,7 +314,7 @@ hr {
 .bd-aside .active {
   font-weight: 600;
   background-color: rgba(58, 87, 232, 0.1);
-  color: #3a57e8;
+  color: orangered;
 }
 .bd-aside .btn {
   padding: 0.25rem 0.5rem;
@@ -331,11 +331,11 @@ hr {
 }
 .bd-aside .btn:hover, .bd-aside .btn:focus {
   background-color: rgba(58, 87, 232, 0.1);
-  color: #3a57e8;
+  color: orangered;
 }
 .bd-aside .btn:focus {
-  -webkit-box-shadow: 0 0 0 0.063rem rgba(58, 87, 232, 0.7);
-          box-shadow: 0 0 0 0.063rem rgba(58, 87, 232, 0.7);
+  -webkit-box-shadow: 0 0 0 0.063rem orange;
+          box-shadow: 0 0 0 0.063rem orange;
 }
 .bd-aside .btn[aria-expanded=true] .right-icon {
   -webkit-transform: rotate(90deg);
@@ -551,8 +551,8 @@ body.uikit .btn-download {
   z-index: 999;
   text-align: center;
   cursor: pointer;
-  background: #3a57e8;
-  color: #ffffff;
+  background:orangered;
+  color: orange;
   padding: 0.2rem;
   -webkit-border-radius: 0 1rem 1rem 0;
           border-radius: 0 1rem 1rem 0;

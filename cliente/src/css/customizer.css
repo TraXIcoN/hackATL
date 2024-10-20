@@ -24,16 +24,16 @@ body {
 
 :root {
   --bs-heading-color: #0c112e;
-  --bs-primary: #3a57e8;
-  --bs-primary-shade-80: #0c112e;
-  --bs-primary-shade-60: #17235d;
-  --bs-primary-shade-40: #23348b;
-  --bs-primary-shade-20: #2e46ba;
-  --bs-primary-tint-90: #ebeefd;
-  --bs-primary-tint-80: #d8ddfa;
-  --bs-primary-tint-60: #b0bcf6;
-  --bs-primary-tint-40: #899af1;
-  --bs-primary-tint-20: #6179ed;
+  --bs-primary: orange;
+  --bs-primary-shade-80: orange;
+  --bs-primary-shade-60: orange;
+  --bs-primary-shade-40: orange;
+  --bs-primary-shade-20: orangered;
+  --bs-primary-tint-90: orange;
+  --bs-primary-tint-80: orange;
+  --bs-primary-tint-60: orange;
+  --bs-primary-tint-40: orange;
+  --bs-primary-tint-20: orangered;
   --bs-primary-rgb: 58, 87, 232;
   --bs-heading-color: #011f20;
   --bs-info: #079aa2;
@@ -50,16 +50,16 @@ body {
 }
 :root .theme-color-blue {
   --bs-heading-color: #0c112e;
-  --bs-blue: #3a57e8;
+  --bs-blue:orangered;
   --bs-blue-shade-80: #0c112e;
   --bs-blue-shade-60: #17235d;
   --bs-blue-shade-40: #23348b;
-  --bs-blue-shade-20: #2e46ba;
+  --bs-blue-shade-20: orangered;
   --bs-blue-tint-90: #ebeefd;
   --bs-blue-tint-80: #d8ddfa;
-  --bs-blue-tint-60: #b0bcf6;
-  --bs-blue-tint-40: #899af1;
-  --bs-blue-tint-20: #6179ed;
+  --bs-blue-tint-60: orange;
+  --bs-blue-tint-40: orange;
+  --bs-blue-tint-20: orange;
   --bs-blue-rgb: 58, 87, 232;
   --bs-heading-color: #140330;
   --bs-indigo: #6610f2;

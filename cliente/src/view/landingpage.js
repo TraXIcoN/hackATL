@@ -104,9 +104,9 @@ export default function LandingPage() {
         <div className=" text-center pt-2 pb-5">
           <div className="card-body">
             <h1 className="card-title mb-4">
-              Sale and Purchase of
+              Smart Energy Management 
               <br />
-              Energy Surplus
+              for Smarter Cities
             </h1>
             <div className="mb-5"></div>
           </div>
@@ -125,7 +125,7 @@ export default function LandingPage() {
                   {salesCount}
                 </h5>
                 <p className="card-text" style={{ color: "#000000" }}>
-                  Number of Sales
+                Power Saving Subscriptions
                 </p>
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function LandingPage() {
                   {ads}
                 </h5>
                 <p className="card-text" style={{ color: "#000000" }}>
-                  Ads
+                  Energy Storage & Profit Maximization
                 </p>
               </div>
             </div>
@@ -157,7 +157,7 @@ export default function LandingPage() {
                   {usersCount}
                 </h5>
                 <p className="card-text" style={{ color: "#000000" }}>
-                  Users
+                  Sustainability & Clean Energy
                 </p>
               </div>
             </div>
@@ -167,18 +167,10 @@ export default function LandingPage() {
       <div>
         <div className="container  d-flex justify-content-around my-5">
           <div className="col-5">
-            <h3>How does energy surplus work?</h3>
+            <h3>What is Charge Power?</h3>
             <p>
-              Energy surplus occurs when a solar energy installation produces
-              more electricity than is consumed at the moment. This excess
-              energy is sent to the distributor's electrical grid, and the owner
-              of the installation is compensated for this excess production in
-              energy credits.
-            </p>
-            <p>
-              They can be used to reduce the electricity bill during times of
-              low solar production. In some cases, the surplus can also be
-              stored in batteries for later use.
+            chargePower is an intelligent energy optimization platform that leverages AI to manage electricity consumption, storage, and distribution. By monitoring grid capacity, electricity prices, and real-time consumer data, it optimizes power usage through three main strategies: controlling high-energy devices, charging batteries during off-peak times, and discharging stored energy to the grid during peak demand. This innovative approach enables both cost savings and profit generation through energy subscriptions, dynamic pricing, and solar power production.
+    
             </p>
           </div>
           <div className="col-4">
@@ -189,17 +181,12 @@ export default function LandingPage() {
       <div className="fundo">
         <div className="container  py-5">
           <div className="text-center">
-            <h2 className="mb-1 fw-semibold">Sell your surplus</h2>
+            <h2 className="mb-1 fw-semibold">Our Three-Phase Plan for Energy Optimization</h2>
             <p>
-              Produced more energy than you consume? Don't let your energy
-              surplus go to waste!
+              
               <br />
               <br />
-              On our platform, you can easily and securely sell your energy
-              surplus to other
-              <br />
-              <br />
-              consumers and producers of renewable energy.
+              
             </p>
           </div>
           <div className="row justify-content-evenly my-4 ">
@@ -212,11 +199,9 @@ export default function LandingPage() {
                   />
                 </div>
                 <div className="col-10">
-                  <h6 className="fw-bold">Have a source of energy</h6>
+                  <h6 className="fw-bold">Phase 1: Power Saving Subscriptions</h6>
                   <p>
-                    Don't rely on fluctuations in energy prices anymore and
-                    create your own source of energy. To sell your surplus, you
-                    need to have a power source of up to 350 watts.
+                  We begin by offering energy-saving subscriptions to consumers, encouraging participation in the chargePower network. This phase helps us build momentum while gathering valuable data on user behavior and energy consumption patterns. By refining our AI model, we ensure smarter, more efficient energy management, tailored to meet the needs of our users.
                   </p>
                 </div>
               </div>
@@ -239,13 +224,10 @@ export default function LandingPage() {
                 </div>
                 <div className="col-10">
                   <h6 className="mb-1 fw-bold">
-                    Register the panels with DGEG
+                  Phase 2: Battery Network Buildout with ‘Charge Back’ Capabilities
                   </h6>
                   <p>
-                    You need to register your solar panels with the General
-                    Directorate of Energy and Geology (DGEG). It is a legal
-                    requirement and ensures that your installation complies with
-                    safety and quality standards.
+                  Next, we partner with inner-city condos, businesses, and electric vehicle (EV) charging companies to install battery storage systems. These batteries will enable users to "charge back" excess energy to the grid during peak demand periods, helping to stabilize the grid and provide additional revenue. At the very least, during high energy demand periods, slow charging will be enabled, contributing to a more balanced and efficient electricity ecosystem.
                   </p>
                 </div>
               </div>
@@ -261,12 +243,10 @@ export default function LandingPage() {
                   </div>
                   <div className="col-10">
                     <h6 className="mb-1 fw-bold">
-                      Request a Certificate of Electricity Production (CPE)
+                    Phase 3: High-Efficiency Solar Panel Network
                     </h6>
                     <p>
-                      It is important to request a Certificate of Electricity
-                      Production (CPE). The CPE is a legal requirement for
-                      selling electricity to the national grid.
+                    In the final phase, we will expand into solar energy production by working with city buildings to secure permits for installing solar panels on their rooftops. These panels will charge the pre-installed batteries, further enhancing our ability to produce and store clean, renewable energy. This step aligns with our commitment to sustainability and reduces reliance on traditional grid sources.
                     </p>
                   </div>
                 </div>
@@ -289,13 +269,10 @@ export default function LandingPage() {
                   </div>
                   <div className="col-10">
                     <h6 className="mb-1 fw-bold">
-                      Create an account and make the sale
+                    Overview
                     </h6>
                     <p>
-                      Creating an account on our platform is quick and easy.
-                      After registration, you can easily publish your surplus
-                      products and materials for sale. Our platform connects you
-                      to interested buyers.
+                    chargePower optimizes energy usage by integrating AI with real-time data from the grid, consumer devices, and weather patterns. Our three-phase approach includes power-saving subscriptions, building a battery network with "charge back" capabilities, and solar energy integration to ensure sustainable, cost-effective energy management.
                     </p>
                   </div>
                 </div>
@@ -309,8 +286,8 @@ export default function LandingPage() {
           <img className="img-fluid" src="image/a2.gif" />
         </div>
         <div className="col-5">
-          <h3 className="fw-semibold">Buy energy surplus</h3>
-          <p>Necessary steps to purchase surplus:</p>
+          <h3 className="fw-semibold">How Do We Actually Make Money?</h3>
+          <p></p>
           <div className="row">
             <div className="col-1 me-2">
               <i
@@ -319,10 +296,10 @@ export default function LandingPage() {
               />
             </div>
             <div className="col-10">
-              <h6 className="fw-bold">Register on this platform</h6>
+              <h6 className="fw-bold">Energy Saving Subscriptions</h6>
               <p>
-                Register now on our platform and start maximizing the benefits
-                of your production or business with renewable energy.
+                
+              We offer energy-saving subscriptions that optimize electricity usage for consumers, providing cost savings while generating revenue for chargePower.
               </p>
             </div>
           </div>
@@ -334,10 +311,10 @@ export default function LandingPage() {
               />
             </div>
             <div className="col-10">
-              <h6 className="fw-bold">Access the buyer area</h6>
+              <h6 className="fw-bold">Buying and Selling Energy</h6>
               <p>
-                Access the buyer area of our platform now and find energy
-                surplus.
+              
+              chargePower buys electricity at off-peak prices and sells it back to the grid at peak demand, profiting from market fluctuations.
               </p>
             </div>
           </div>
@@ -349,11 +326,10 @@ export default function LandingPage() {
               />
             </div>
             <div className="col-10">
-              <h6 className="fw-bold">Choose the best service and pay</h6>
+              <h6 className="fw-bold">Solar and Battery Integration</h6>
               <p>
-                Find the perfect service for you and do business simply and
-                securely. On our platform, choose from a wide range of renewable
-                energy services and pay easily and conveniently.
+              
+              As we increase solar panel installations and battery storage capacity, our profitability grows with reduced reliance on the grid and precise AI-driven energy management.
               </p>
             </div>
           </div>
@@ -365,21 +341,20 @@ export default function LandingPage() {
             <div className="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4">
               <div className="col-md-6 d-flex align-items-center text-muted fs-4 ">
                 <p className="ms-5 ps-5">
-                  We connect buyers and sellers for an energy and sustainable
-                  economy!
+                "Empowering a sustainable future through intelligent energy innovation."
                 </p>
               </div>
               <div className="col-md-2 justify-content-end ">
                 <p style={{ color: "#272D37" }}>
                   <i className="fa-solid fa-map" style={{ color: "#272D37" }} />{" "}
-                  Viseu
+                  Urban_Pulse@gmail.com
                 </p>
                 <p style={{ color: "#272D37" }}>
                   <i
                     className="fa-regular fa-comment"
                     style={{ color: "#272D37" }}
                   />{" "}
-                  +351 345 678
+                  +470 689 6057
                 </p>
               </div>
             </div>

@@ -1,15 +1,72 @@
-body{
-
-    font-family: 'Poppins', sans-serif;
-    color: black;
-}
-
-.tamimg {
-    width: 300px;
-    height: 300px;
-}
-
-.fundo {
-    background: rgb(161, 211, 254);
-    background: linear-gradient(145deg, rgba(161, 211, 254, 1) 0%, rgba(163, 173, 244, 1) 100%);
-}
+:root {
+    --primary-orange: #D93600;      /* Darker orange-red */
+    --secondary-orange: #E67300;    /* Darker orange */
+    --background-orange: #FFF0DB;   /* Warmer background */
+    --header-color: #B22222;        /* Dark red for header */
+    --accent-yellow: #CC7000;       /* Dark yellow-orange */
+    --text-dark: #1A1A1A;          /* Darker text */
+    --text-light: #FFFFFF;         /* Light text */
+  }
+  
+  /* Header specific styling */
+  .main-header {
+    color: var(--header-color) !important;
+    font-weight: 700 !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    position: relative;
+  }
+  
+  .main-header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, var(--header-color), var(--accent-yellow));
+  }
+  
+  /* Update existing styles with darker shades */
+  .fundo {
+    background: linear-gradient(135deg, var(--background-orange), #FFE5CC) !important;
+  }
+  
+  .card {
+    background: linear-gradient(to bottom right, #FFF5E6, #FFE8CC) !important;
+    border: 1px solid var(--accent-yellow) !important;
+    box-shadow: 0 4px 6px rgba(204, 112, 0, 0.1);
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-orange) !important;
+    border-color: var(--primary-orange) !important;
+    font-weight: 600;
+  }
+  
+  .btn-outline-dark {
+    color: var(--accent-yellow) !important;
+    border-color: var(--accent-yellow) !important;
+    font-weight: 600;
+  }
+  
+  .btn-outline-dark:hover {
+    background-color: var(--accent-yellow) !important;
+  }
+  
+  .card-title {
+    color: var(--header-color) !important;
+    font-weight: 600;
+  }
+  
+  .fa-solid, .fa-regular, .fa-sharp {
+    background-color: var(--header-color) !important;
+  }
+  
+  /* Enhanced hover effects */
+  .card:hover {
+    box-shadow: 0 6px 12px rgba(204, 112, 0, 0.15) !important;
+    background: linear-gradient(to bottom right, #FFE8CC, #FFD9B3) !important;
+  }
