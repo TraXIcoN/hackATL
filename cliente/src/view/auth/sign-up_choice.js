@@ -135,7 +135,7 @@ export default function RegisterChoice() {
                               <Link
                                 type="submit"
                                 onClick={() => chooseBuyer()}
-                                to="/registerbuyer"
+                                to="/registarcomprador"
                               >
                                 <img
                                   src="image/auth/comprador.png"
@@ -150,7 +150,7 @@ export default function RegisterChoice() {
                               <Link
                                 type="submit"
                                 onClick={() => chooseSeller()}
-                                to="/registerseller"
+                                to="/registarvendedor"
                               >
                                 <img
                                   src="image/auth/vendedor.png"

@@ -393,7 +393,9 @@ export default function LandingPage() {
                     <use xlinkHref="#bootstrap" />
                   </svg>
                 </a>
-                <span className="mb-3 mb-md-0 text-muted">© 2023 wonderit</span>
+                <span className="mb-3 mb-md-0 text-muted">
+                  © 2024 Need to know
+                </span>
               </div>
               <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
                 <li className="ms-3">
